@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
+
 const App = () => {
   const [question, setQuestion] = useState("");
   const [responseText, setResponseText] = useState("");
@@ -13,7 +15,7 @@ const App = () => {
 
     try {
       const response = await axios({
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyC8MgjOkdo7IoeZCBYKc8IMCiXru9IYVVc",
+        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyBCaM1vM8yA_elsurBRrBWiU7v2Rp4FsyY",
         method: 'post',
         data: {"contents":[{"parts":[{"text":question}]}]}
       });
