@@ -13,9 +13,12 @@ const App = () => {
     setResponseText(""); 
     console.log("Loading............");
 
+    const api = import.meta.env.VITE_API_URL;
+
+
     try {
       const response = await axios({
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyBCaM1vM8yA_elsurBRrBWiU7v2Rp4FsyY",
+        url: api,
         method: 'post',
         data: {"contents":[{"parts":[{"text":question}]}]}
       });
